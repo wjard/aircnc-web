@@ -1,0 +1,96 @@
+//possíveis problemas no vs code no linux
+//maximo de watchers atingidos
+//"Visual Studio Code is unable to watch for file changes in this large workspace" (error ENOSPC)#
+//https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc
+
+// arquivos padrões para o .gitignore
+https://github.com/github/gitignore
+
+//Extensions para o VS Code
+Color Highlight => já exibe a cor quando usados código rgb nos arquivos (ex: #999)
+C#
+GitLens — Git supercharged
+TSLint => Typescript plugin
+Material Icon Theme => Icones para identificar melhor os tipos de arquivos e pastas
+vscode-nuget-package-manager
+Rocketseat React Native
+Rocketseat ReactJS
+
+
+// extensão do node para ouvir alterações do serviço em execução
+yarn add nodemon -D
+// para usar basta inserir uma tag "scripts" no package.json. conforme abaixo:
+//"scripts": {
+//    "dev": "nodemon src/server.js"
+//  },
+//em seguida rodar no terminal: yarn dev (que é o nome da parametro criado na tag "scripts")
+yarn dev
+
+////biblioteca para manusear chamadas http (get, post etc)
+yarn add axios
+
+//Utilizar variaveis de ambiente no node
+//https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786
+npm install dotenv
+//Read the .env File
+const dotenv = require('dotenv');
+dotenv.config();
+
+//criar projeto padrão no react
+//será incluído transpiladores etc
+yarn create react-app <<nome_pasta>>
+
+//criar rotas no react - APENAS PARA HTML. 
+//existe plugin para React Native
+yarn add react-router-dom
+
+//pacotes para navegação das paginas
+yarn add react-navigation react-native-gesture-handler react-native-reanimated
+yarn add react-navigation-stack
+//para menu tipo hamburguer
+yarn add react-navigation-drawer
+//para menu na parte inferior
+yarn add react-navigation-tabs 
+//menu material BOTTOM
+yarn add react-navigation-material-bottom-tabs react-native-paper 
+
+//local storage no app
+yarn add @react-native-community/async-storage
+
+//para o gesture em android emulator seguir os passos do site:
+// https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html
+
+
+
+//instalando o React-Native
+npx react-native init <<nome do projeto>>>
+//primeiro deploy do app em react-native
+yarn react-native run-android
+//talvez precise rodar em outro terminal o comando: yarn start
+
+//dicas para debugar no android com localhost e redirecionar portas
+//para usar o 'debug js' no app
+adb reverse tcp:8081 tcp:8081
+//para usar o api como localhost (no exemplo usei a porta 3334 na minha api)
+adb reverse tcp:3334 tcp:3334
+
+//websocket
+ //lado do backend
+ yarn add socket.io
+ //lado do frontend, app e clients em geral
+ yarn add socket.io-client
+ 
+
+//dicas para instalar o emulador do android. feito pela Rocketseat
+https://docs.rocketseat.dev ou https://docs.rocketseat.dev/ambiente-react-native/introducao
+
+
+ //Reduzindo o tamanho do APK para Android no React Native
+//https://blog.rocketseat.com.br/reduzindo-o-tamanho-das-builds-para-android-no-react-native/
+
+//Publishing to Google Play Store
+//https://facebook.github.io/react-native/docs/signed-apk-android.html
+
+
+//remover configurações do git da pasta. desatacha tudo
+rm -rf .git
