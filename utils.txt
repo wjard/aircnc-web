@@ -16,6 +16,15 @@ vscode-nuget-package-manager
 Rocketseat React Native
 Rocketseat ReactJS
 
+//auxiliar na construção de tags, completa a sintaxe das tags html
+//config de emet para react
+//no arquivo settings.json incluir as tags abaixo:
+   "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
 
 // extensão do node para ouvir alterações do serviço em execução
 yarn add nodemon -D

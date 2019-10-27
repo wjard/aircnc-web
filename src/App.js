@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import logo from './assets/logo.svg';
 import './App.css';
+import Routes from './routes';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <>
+      <div className='change-user'>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+          href='/'
+          style={{ display: localStorage.getItem('user_id') ? 'visible' : 'none' }}
+          onClick={() => localStorage.clear()}>
+          <label>Trocar de usuário</label>
         </a>
-      </header>
-    </div>
+      </div>
+      <div className="container">
+        <a href={localStorage.getItem('user_id') ? '/dashboard' : '/'}>
+          <img
+            src={logo}
+            alt="Aircnc React App">
+          </img>
+        </a>
+        <div className="content">
+          <Routes></Routes>
+        </div>
+      </div>
+    </>
   );
 }
 

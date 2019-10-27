@@ -1,0 +1,39 @@
+ul.spot-list {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 30px;    
+}
+
+ul.spot-list li{
+    display:flex;
+    flex-direction: column;    
+}
+
+ul.spot-list li header{
+    width:100%;
+    height:120px;    
+    /* border-radius: 4px;
+    background-size: cover;    
+    background-position: center;     */
+    overflow-y: hidden ! important;
+    overflow-x: hidden ! important;
+    background-color: transparent;    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ul.spot-list li strong {
+    margin-top: 10px;
+    /*font-size: 24px*/
+    font-size: 1.7em;    
+    color: #444
+}
+
+ul.spot-list li span{
+    font-size: 15px; /*ou 15px*/    
+    color: #999
+}
